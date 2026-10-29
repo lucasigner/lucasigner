@@ -19,7 +19,7 @@ Ziel: Eigene Garmin-Daten über die Garmin Personal API auslesen und auswerten. 
 
 - [x] Schritt 1: Python 3 vorhanden, Ordner und `.gitignore` angelegt.
 - [x] Schritt 2: Schlüssel in Garmin Connect erstellt.
-- [ ] Schritt 3: Schlüssel als `GARMIN_API_KEY` in den Umgebungs-Einstellungen hinterlegen,
+- [x] Schritt 3: Schlüssel als `GARMIN_API_KEY` in den Umgebungs-Einstellungen hinterlegen,
       neue Sitzung starten, prüfen, ob die Variable gesetzt ist (Länge > 0, Wert nie anzeigen).
 - [ ] Schritt 4: Nutzer kopiert Garmins Doku (Basis-Adresse, Authentifizierung,
       Beispiel-Request) in den Chat. Daraus `holen.py` schreiben: Aktivitäten der letzten
