@@ -31,12 +31,14 @@ Ziel: Eigene Garmin-Daten über die Garmin Personal API auslesen und auswerten. 
       Ergebnis: Host erreichbar, 7 Tage = 8 Aktivitäten, vor 30 und vor 180 Tagen abrufbar
       (`holen.py [tage] [vor]`). Puls ja (Ø, max, Zonen 1–5), Schlaf und HRV nicht in der
       Aktivitätsliste. Vor 180 Tagen teils doppelte Einträge (zweites Gerät) – beim Auswerten bereinigen.
-- [ ] Schritt 5: Auswerten. Drei Starts anbieten:
+- [x] Schritt 5: Auswerten. Drei Starts anbieten:
       (a) letzte Woche: Umfang, Intensität, Pace im Verhältnis zur Herzfrequenz;
       (b) Trainingsplan für zwei Wochen (vorher Ziel, Renndatum und freie Tage erfragen);
       (c) was ein guter Trainer zu diesen Daten sagen würde.
       Mit echten Zahlen und Einheiten rechnen und sagen, wenn die Datenlage zu dünn ist.
       Auf die Uhr schicken geht mit der Personal API nicht.
+      Ergebnis: 8 Wochen (03.09.–29.10.2026) abgerufen, ausgewertet mit `auswerten.py`.
+      (a) und (c) erledigt; (b) offen, braucht Ziel, Renndatum und freie Tage.
 
 ## Sicherheit
 
