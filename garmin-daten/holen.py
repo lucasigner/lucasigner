@@ -1,4 +1,6 @@
-"""Aktivitäten der letzten 7 Tage über die Garmin Personal API holen und unter daten/ speichern.
+"""Aktivitäten (Standard: letzte 7 Tage) über die Garmin Personal API holen und unter daten/ speichern.
+
+Aufruf: python3 holen.py [tage] [vor]  – z. B. "7 30" = 7 Tage, die vor 30 Tagen enden.
 
 Basis-Adresse, Token-Pfad und Endpunkt stammen aus Garmins Beispiel-Client
 github.com/garmin/connect-personal-api-python (constants.py, auth.py, client.py).
@@ -50,8 +52,11 @@ def main():
     token = anfrage("POST", TOKEN_PFAD, {"Accept": "*/*", "Authorization": f"ApiKey {schluessel}"})
     token = token.decode().strip()
 
-    bis = date.today()
-    von = bis - timedelta(days=7)
+    # Optional: Anzahl Tage und wie viele Tage zurück das Fenster endet, z. B. "holen.py 7 30".
+    tage = int(sys.argv[1]) if len(sys.argv) > 1 else 7
+    vor = int(sys.argv[2]) if len(sys.argv) > 2 else 0
+    bis = date.today() - timedelta(days=vor)
+    von = bis - timedelta(days=tage)
     daten = anfrage(
         "GET",
         AKTIVITAETEN_PFAD,
