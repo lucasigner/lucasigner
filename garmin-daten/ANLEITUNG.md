@@ -21,13 +21,16 @@ Ziel: Eigene Garmin-Daten über die Garmin Personal API auslesen und auswerten. 
 - [x] Schritt 2: Schlüssel in Garmin Connect erstellt.
 - [x] Schritt 3: Schlüssel als `GARMIN_API_KEY` in den Umgebungs-Einstellungen hinterlegen,
       neue Sitzung starten, prüfen, ob die Variable gesetzt ist (Länge > 0, Wert nie anzeigen).
-- [ ] Schritt 4: Nutzer kopiert Garmins Doku (Basis-Adresse, Authentifizierung,
+- [x] Schritt 4: Nutzer kopiert Garmins Doku (Basis-Adresse, Authentifizierung,
       Beispiel-Request) in den Chat. Daraus `holen.py` schreiben: Aktivitäten der letzten
       7 Tage, Antwort unter `daten/` speichern. Danach berichten: Anzahl, Felder, ob Schlaf,
       Puls und HRV dabei sind; testen, ob Zeiträume vor 30 und vor 180 Tagen abrufbar sind.
       Bei 401, 403 oder 429 in einem Satz erklären; bei 429 warten statt in einer Schleife.
       Falls die Netzwerk-Richtlinie den Garmin-Host blockt: Host in den Umgebungs-Einstellungen
       unter „Allowed domains“ freigeben.
+      Ergebnis: Host erreichbar, 7 Tage = 8 Aktivitäten, vor 30 und vor 180 Tagen abrufbar
+      (`holen.py [tage] [vor]`). Puls ja (Ø, max, Zonen 1–5), Schlaf und HRV nicht in der
+      Aktivitätsliste. Vor 180 Tagen teils doppelte Einträge (zweites Gerät) – beim Auswerten bereinigen.
 - [ ] Schritt 5: Auswerten. Drei Starts anbieten:
       (a) letzte Woche: Umfang, Intensität, Pace im Verhältnis zur Herzfrequenz;
       (b) Trainingsplan für zwei Wochen (vorher Ziel, Renndatum und freie Tage erfragen);
