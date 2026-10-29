@@ -38,7 +38,8 @@ Ziel: Eigene Garmin-Daten über die Garmin Personal API auslesen und auswerten. 
       Mit echten Zahlen und Einheiten rechnen und sagen, wenn die Datenlage zu dünn ist.
       Auf die Uhr schicken geht mit der Personal API nicht.
       Ergebnis: 8 Wochen (03.09.–29.10.2026) abgerufen, ausgewertet mit `auswerten.py`.
-      (a) und (c) erledigt; (b) offen, braucht Ziel, Renndatum und freie Tage.
+      (a), (b) und (c) erledigt. Trainingsplan 29.10.–15.11.2026 liegt unter `daten/`
+      (bleibt wie alle persönlichen Daten aus dem öffentlichen Repository).
 
 ## Sicherheit
 
